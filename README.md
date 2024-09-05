@@ -16,7 +16,6 @@ This is a web-based Expense Tracker built with Flask, SQLite, and Bootstrap. It 
 - Backend: Flask, SQLite
 - Frontend: HTML, CSS, Bootstrap 4
 - Database: SQLite for storing and retrieving expense data.
-- Installation and Setup
 
 # Prerequisites
 Ensure you have Python installed. You can download Python from here.
