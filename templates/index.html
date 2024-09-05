@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expense Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Expenses</h1>
+        <a href="{{ url_for('add_expense') }}" class="btn btn-primary mb-4">Add Expense</a>
+        <a href="{{ url_for('report') }}" class="btn btn-info mb-4">View Report</a>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for expense in expenses %}
+                <tr>
+                    <td>{{ expense[0] }}</td>
+                    <td>{{ expense[1] }}</td>
+                    <td>{{ expense[2] }}</td>
+                    <td>{{ expense[3] }}</td>
+                    <td>{{ expense[4] }}</td>
+                    <td>
+                        <a href="{{ url_for('update_expense', expense_id=expense[0]) }}" class="btn btn-sm btn-warning">Update</a>
+                        <a href="{{ url_for('delete_expense', expense_id=expense[0]) }}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
