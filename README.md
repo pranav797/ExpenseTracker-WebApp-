@@ -43,3 +43,8 @@ Open browser and navigate to http://127.0.0.1:5000/
 - Update Expense: Modify an existing expense by clicking the "Update" button next to the entry.
 - Delete Expense: Remove an expense by clicking the "Delete" button next to the entry.
 - Reports: View your total spending and categorized expenses by clicking "View Report."
+
+# Application Screenshots
+![image](https://github.com/user-attachments/assets/bed8321f-4c86-46f0-b137-e2678ee63afc)
+![image](https://github.com/user-attachments/assets/c10c3ef0-dc0e-49f4-9321-e35cc36ad0db)
+![image](https://github.com/user-attachments/assets/2746f1b6-7506-4be2-91c1-b3704d1f6326)
